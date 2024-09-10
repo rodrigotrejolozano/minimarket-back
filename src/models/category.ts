@@ -1,5 +1,6 @@
 import { Optional } from 'sequelize';
 import { Model, Column, Table, DataType, HasMany } from 'sequelize-typescript';
+import Product from './product';
 
 interface CategoryAttributes {
     id: number;
@@ -37,6 +38,8 @@ class Category extends Model<CategoryAttributes, CategoryCreationAttributes> {
     })
     public status!: boolean;
 
+    @HasMany(() => Product, 'categoryId')
+    public product!: Product[];
 }
 
 export default Category;
