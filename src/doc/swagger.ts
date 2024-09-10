@@ -1,3 +1,5 @@
+import { GetAllCategories } from "./Category";
+
 export const swaggerDocument = {
     openapi: '3.0.1',
     info: {
@@ -19,6 +21,9 @@ export const swaggerDocument = {
         }
     ],
     paths: {
+        '/categories/': {
+            get: GetAllCategories,
+        },
 
     },
     servers: [
