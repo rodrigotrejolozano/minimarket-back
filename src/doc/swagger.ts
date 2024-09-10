@@ -1,4 +1,13 @@
-import { GetAllCategories } from "./Category";
+import { GetAllCategories } from './Category';
+import {
+    CreateProducts,
+    DeleteProducts,
+    GetAllProducts,
+    GetOneProduct,
+    GetProductsByCategory,
+    UpdateProducts
+} from './Product';
+
 
 export const swaggerDocument = {
     openapi: '3.0.1',
@@ -24,7 +33,18 @@ export const swaggerDocument = {
         '/categories/': {
             get: GetAllCategories,
         },
-
+        '/products/': {
+            get: GetAllProducts,
+            post: CreateProducts,
+        },
+        '/products/{id}': {
+            get: GetOneProduct,
+            put: UpdateProducts,
+            delete: DeleteProducts,
+        },
+        '/products/category/{categoryId}': {
+            get: GetProductsByCategory,
+        },
     },
     servers: [
         {
