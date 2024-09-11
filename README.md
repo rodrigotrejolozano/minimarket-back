@@ -62,12 +62,12 @@ El proyecto sigue una arquitectura organizada en:
    ```
 8. Accede a la aplicación en:
    ```
-   http://localhost:3000/api/v1
+   http://localhost:3001/api/v1
    ```
    
 9. Accede a la documentación de la API en:
    ```
-   http://localhost:3000/api-docs
+   http://localhost:3001/api-docs
    ```
 
 ## Uso en Producción
@@ -84,13 +84,13 @@ El proyecto sigue una arquitectura organizada en:
 
 3. Accede a la aplicación en:
    ```
-   http://localhost:3000/api/v1
+   http://localhost:3001/api/v1
    ```
 
 ## Documentación de la API
 
 La API está documentada utilizando **Swagger**. Una vez que el servidor esté en ejecución, puedes acceder a la documentación completa e interactiva en:
-http://localhost:3000/api-docs
+http://localhost:3001/api-docs
 
 ## Hecho por
 
