@@ -1,9 +1,10 @@
 import { Service } from "typedi";
 import Category from "../models/category";
 import Product from "../models/product";
+import { IProductRepository } from "../interfaces/Product.interface";
 
 @Service()
-export default class ProductRepository {
+export default class ProductRepository implements IProductRepository {
     async findAllProducts() {
         return await Product.findAll(
             {
