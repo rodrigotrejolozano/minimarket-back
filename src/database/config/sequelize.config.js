@@ -4,6 +4,7 @@ require('ts-node/register');
 const { Config } = require('../../config');
 
 const driver = Config.database.connection;
+
 module.exports = {
     username: Config.database.connections[driver].username,
     password: Config.database.connections[driver].password,

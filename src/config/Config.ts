@@ -1,5 +1,5 @@
 import dotenv from 'dotenv';
-import { Driver, IConfig } from './ConfigTypes';
+import { Driver, IConfig, Node_env } from './ConfigTypes';
 dotenv.config({
     path: __dirname + `/../../.env`,
 });
@@ -8,6 +8,7 @@ const config: IConfig = {
         port: process.env.APP_PORT || 3001,
         url: process.env.APP_URL || 'http://localhost',
         storage: process.env.APP_STORAGE || './dbmini.sqlite',
+        node_env: (process.env.NODE_ENV as Node_env) ?? 'development',
     },
     database: {
         connection: (process.env.DB_CONNECTION as Driver) ?? 'sqlite',

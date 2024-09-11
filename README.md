@@ -65,11 +65,6 @@ El proyecto sigue una arquitectura organizada en:
    http://localhost:3001/api/v1
    ```
    
-9. Accede a la documentación de la API en:
-   ```
-   http://localhost:3001/api-docs
-   ```
-
 ## Uso en Producción
 
 1. Compila el proyecto:

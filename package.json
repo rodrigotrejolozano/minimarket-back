@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rimraf dist && tsc",
-    "dev": "nodemon",
-    "start:production": "npm run build && node dist/index.js",
+    "dev": "NODE_ENV=development nodemon",
+    "start:production": "npm run build && NODE_ENV=production node dist/index.js",
     "db:migrate": "npx sequelize-cli db:migrate",
     "db:seed": "npx sequelize-cli db:seed:all",
     "db:seed:name": "npx sequelize-cli seed:generate --name",

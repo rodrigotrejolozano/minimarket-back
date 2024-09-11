@@ -1,8 +1,13 @@
 const path = require('path');
+import dotenv from 'dotenv';
+dotenv.config({
+    path: __dirname + `/.env`,
+});
+const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
     config: path.resolve('src/database/config', 'sequelize.config.js'),
-    'models-path': path.resolve('src', 'models'),
-    'seeders-path': path.resolve('src/database', 'seeders'),
-    'migrations-path': path.resolve('src/database', 'migrations'),
+    'models-path': path.resolve(isProduction ? 'dist/models' : 'src/models'),
+    'seeders-path': path.resolve(isProduction ? 'dist/database/seeders' : 'src/database/seeders'),
+    'migrations-path': path.resolve(isProduction ? 'dist/database/migrations' : 'src/database/migrations'),
 };

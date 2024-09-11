@@ -1,9 +1,11 @@
 export type Driver = 'sqlite' | 'mysql';
+export type Node_env = 'development' | 'production' | 'test';
 export interface IConfig {
     app: {
         port: number | string;
         url: string;
         storage: string;
+        node_env: Node_env;
     };
     database: {
         connection: Driver;
